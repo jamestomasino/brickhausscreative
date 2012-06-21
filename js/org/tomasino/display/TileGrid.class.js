@@ -22,6 +22,7 @@
 			this._slideSpeed = 250;
 			this._allItems = [];
 			this._allTiles = [];
+			this._allPositions = [];
 			this._x = 0;
 			this._y = 0;
 			this._scrollEnabled = true;
@@ -77,6 +78,7 @@
 						item.css ( 'left', this._displayWidth * i);
 						this._allItems.push ( item );
 						this._allTiles.push ( tile );
+						this._allPositions.push ( { 'x':i, 'y':j} );
 					}
 				}
 			}
@@ -122,9 +124,8 @@
 					if ( itemid == id ) { break; }
 				}
 				if (i >= 0) {
-					var x = i % this._matrixWidth;
-					var y = Math.floor ( i / this._matrixWidth );
-					this.goto (x, y, animate);
+					var pos = this._allPositions[i];
+					this.goto (pos['x'], pos['y'], animate);
 				}
 			}
 		},

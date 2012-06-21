@@ -2,14 +2,17 @@ Namespace.baseURL = 'js/';
 Namespace.import ( this, 'org.tomasino.events.EventDispatcher' );
 Namespace.import ( this, 'org.tomasino.display.TileGrid' );
 
-var matrix = [ $('#home'),  $('#logos'),      $('#directmail'),  $('#advertising'),  $('#brochure'),  $('#packaging'),
-			   null,        $('#logos_more') ];
+var matrix = [ null,        $('#logos_more'),   null,              null,
+               $('#home'),  $('#logos'),        null,              null,
+               null,        $('#directmail'),  $('#advertising'),  null,
+			   null,        null,              $('#brochure'),     $('#packaging') ];
 
 var grid = new TileGrid ( );
 	grid.setContainer ( $('#container') );
 	grid.setDisplayWidth ( 1024 );
 	grid.setDisplayHeight ( 672 );
-	grid.attachMatrix ( matrix, 6, 2 );
+	grid.attachMatrix ( matrix, 4, 4);
+	grid.goto(0,1);
 
 $('#container').css('visibility', 'visible' );
 
