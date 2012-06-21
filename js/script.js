@@ -10,7 +10,7 @@ var matrix = [ null,        $('#logos_more'),   null,              null,
 var grid = new TileGrid ( );
 	grid.setContainer ( $('#container') );
 	grid.setDisplayWidth ( 1024 );
-	grid.setDisplayHeight ( 672 );
+	grid.setDisplayHeight ( 660 );
 	grid.attachMatrix ( matrix, 4, 4);
 	grid.goto(0,1);
 

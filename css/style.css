@@ -248,6 +248,7 @@ nav {
 	#container h2 {
 		position: absolute;
 		color: #FFF;
+		text-transform: uppercase;
 	}
 	
 	#container p { 
@@ -256,6 +257,8 @@ nav {
 		color: #FFF;
 		text-align: justify;
 	}
+	
+	
 #home {
 }
 	
@@ -274,7 +277,37 @@ nav {
 		top: 580px;
 		left: 435px;
 	}
+	
+#logos {
 
+}
+	
+	#logos h2 {
+		top: 150px;
+		left: 475px;
+	}
+	
+	#logos p {
+		top: 200px;
+		left: 310px;
+	}
+
+#logos_more {
+
+}
+	#logos_more h2 {
+		top: 86px;
+		left: 490px;
+		-webkit-transform: rotate(-90deg); 
+		-moz-transform: rotate(-90deg);
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	}
+	
+	#logos_more p {
+		left: 600px;
+		top: 20px;
+	}
+	
 #brochure {
 }
 
@@ -296,16 +329,7 @@ nav {
 		top: 110px;
 		left: 500px;
 	}
-/*
-.tile {
-	-khtml-opacity:.50; 
-	-moz-opacity:.50; 
-	-ms-filter:"alpha(opacity=50)";
-	filter:alpha(opacity=50);
-	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
-	opacity:.50; 
-}
-*/
+
 .u {
 	background-image: url(../img/up.png);
 	background-position: center top;
