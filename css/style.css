@@ -205,98 +205,122 @@ td { vertical-align: top; }
    Author:
    ========================================================================== */
 
-.tileDebugLabel { color: black; background-color: white; opacity: 0.7; filter:alpha(opacity=70); }
+body { 
+	background-color: #FF6600; 
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	color: #CCC;
+  }
 
-#container { margin: 0 auto; visibility: hidden; }
-
-.u {
-	background-image: url(../img/up.png);
-	background-position: center top;
-	background-repeat: no-repeat;
+nav { 
+	margin: 0; 
+	padding: 0; 
+	width: 100%; 
+	height: 25px; 
+	overflow: hidden; 
+	background-color: #c24e00; 
+	z-index: 100; 
+	opacity: 0.7; 
+	filter:alpha(opacity=70); 
+	border-bottom: 1px solid #8f3b03;
+	-moz-box-shadow: 0 0 15px #8f3b03;
+	-webkit-box-shadow: 0 0 15px #8f3b03;
+	box-shadow: 0 0 15px #8f3b03;
+}
+	nav ul {
+		list-style-type:none;
+		margin:2px 0 0 0;
+		padding:0;
+		text-align: center;
+	}
+	
+		nav ul li {
+			cursor: hand; cursor: pointer;
+			display: inline;
+			margin-right: 15px;
+		}
+	
+#container { 
+	margin: 0 auto; 
+	visibility: hidden;
 }
 
-.r {
-	background-image: url(../img/right.png);
-	background-position: right center;
-	background-repeat: no-repeat;
+	#container p { 
+		width: 500px;
+		color: #FFF;
+	}
+	
+#home #logo { 
+	position: relative; 
+	top:50%; 
+	margin-top: -125px; 
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 641px; 
+	height: 250px; 
+	display: block;
 }
 
-.d {
-	background-image: url(../img/down.png);
-	background-position: center bottom;
-	background-repeat: no-repeat;
+#brochure #brochuresample { 
+	position: relative; 
+	display: block; 
+	width: 500px; 
+	height: 347px; 
+} 
+
+
+.arrow-n,
+.arrow-e,
+.arrow-s,
+.arrow-w {
+  /*
+   * In Internet Explorer, The"border-style: dashed" will never be
+   * rendered unless "(width * 5) >= border-width" is true.
+   * Since "width" is set to "0", the "dashed-border" remains
+   * invisible to the user, which renders the border just like how
+   * "border-color: transparent" renders.
+   */
+  border-style: dashed;
+  border-color: transparent;
+  border-width: 0.53em;
+  display: -moz-inline-box;
+  display: inline-block;
+  /* Use font-size to control the size of the arrow. */
+  font-size: 100px;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: middle;
+  width: 0;
+  opacity: 0.7; filter:alpha(opacity=70);
 }
 
-.l {
-	background-image: url(../img/left.png);
-	background-position: left center;
-	background-repeat: no-repeat;
+.arrow-n {
+  border-bottom-width: 1em;
+  border-bottom-style: solid;
+  border-bottom-color: #FFF;
+  bottom: 0.25em;
 }
 
-.ur {
-	background-image: url(../img/up.png), url(../img/right.png);
-	background-position: center top, right center;
-	background-repeat: no-repeat;
+.arrow-e {
+  border-left-width: 1em;
+  border-left-style: solid;
+  border-left-color: #FFF;
+  left: 0.25em;
+}
+                    
+.arrow-s {
+  border-top-width: 1em;
+  border-top-style: solid;
+  border-top-color: #FFF;
+  top: 0.25em;
 }
 
-.ud {
-	background-image: url(../img/up.png), url(../img/down.png);
-	background-position: center top, center bottom;
-	background-repeat: no-repeat;
-}
-
-.ul {
-	background-image: url(../img/up.png), url(../img/left.png);
-	background-position: center top, left center;
-	background-repeat: no-repeat;
-}
-
-.rd {
-	background-image: url(../img/right.png), url(../img/down.png);
-	background-position: right center, center bottom;
-	background-repeat: no-repeat;
-}
-
-.rl {
-	background-image: url(../img/right.png), url(../img/left.png);
-	background-position: right center, left center;
-	background-repeat: no-repeat;
-}
-
-.dl {
-	background-image: url(../img/down.png), url(../img/left.png);
-	background-position: center bottom, left center;
-	background-repeat: no-repeat;
-}
-
-.urd {
-	background-image: url(../img/up.png), url(../img/right.png), url(../img/down.png);
-	background-position: center top, right center, center bottom;
-	background-repeat: no-repeat;
-}
-
-.url {
-	background-image: url(../img/up.png), url(../img/right.png), url(../img/left.png);
-	background-position: center top, right center, left center;
-	background-repeat: no-repeat;
-}
-
-.udl {
-	background-image: url(../img/up.png), url(../img/down.png), url(../img/left.png);
-	background-position: center top, center bottom, left center;
-	background-repeat: no-repeat;
-}
-
-.rdl {
-	background-image: url(../img/right.png), url(../img/down.png), url(../img/left.png);
-	background-position: right center, center bottom, left center;
-	background-repeat: no-repeat;
-}
-
-.urdl {
-	background-image: url(../img/up.png), url(../img/right.png), url(../img/down.png), url(../img/left.png);
-	background-position: center top, right center, center bottom, left center;
-	background-repeat: no-repeat;
+.arrow-w {
+  border-right-width: 1em;
+  border-right-style: solid;
+  border-right-color: #FFF;
+  right: 0.25em;
 }
 
 

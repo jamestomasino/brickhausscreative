@@ -85,7 +85,7 @@
 			this._updateTiles();
 		},
 
-		goto: function ( x, y ) {
+		goto: function ( x, y, animate ) {
 			this._scrollEnabled = false;
 			x = this.NumberUtils.isNumeric (x) ? x : 0;
 			y = this.NumberUtils.isNumeric (y) ? y : 0;
@@ -102,10 +102,31 @@
 			var xPos = 0 - (this._x * this._displayWidth);
 			var yPos = 0 - (this._y * this._displayHeight);
 
-			this._scrollContainer.css( 'left', xPos );
-			this._scrollContainer.css( 'top', yPos );
+			if (animate)
+			{
+				this._scrollContainer.animate ( { left: xPos, top: yPos }, 300, this.Delegate.createDelegate ( this, this._swipeComplete ) );
+			} else {
+				this._scrollContainer.css( 'left', xPos );
+				this._scrollContainer.css( 'top', yPos );
+				this._scrollEnabled = true;
+			}
 
-			this._scrollEnabled = true;
+		},
+
+		goToID: function ( id, animate ) {
+			var item = this._getJQueryItem ( id );
+			if (item != null) {
+				var itemid = item.attr('id');
+				var i = this._allItems.length; while (i--) {
+					var id = this._allItems[i].attr('id');
+					if ( itemid == id ) { break; }
+				}
+				if (i >= 0) {
+					var x = i % this._matrixWidth;
+					var y = Math.floor ( i / this._matrixWidth );
+					this.goto (x, y, animate);
+				}
+			}
 		},
 
 		swipeUp: function () {
@@ -208,7 +229,7 @@
 		},
 
 		_getJQueryItem: function ( item ) {
-			return (item instanceof jQuery) ? item : (item && item.nodeType == 1) ? jQuery (item) : null;
+			return (item instanceof jQuery) ? item : (item && item.nodeType == 1) ? jQuery (item) : (item && item.length) ? jQuery (item) : null;
 		},
 
 		_updateTiles: function () {
