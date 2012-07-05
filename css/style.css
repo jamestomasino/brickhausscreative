@@ -213,13 +213,14 @@ body {
   }
 
 nav { 
+	position: absolute;
 	margin: 0; 
 	padding: 0; 
 	width: 100%; 
 	height: 25px; 
 	overflow: hidden; 
 	background-color: #c24e00; 
-	z-index: 100; 
+	z-index: 1000; 
 	opacity: 0.7; 
 	filter:alpha(opacity=70); 
 	border-bottom: 1px solid #8f3b03;
@@ -347,91 +348,91 @@ nav {
 	filter: "alpha(opacity=40)"; /*for Internet Explorer 8*/
 }
 	
-.u {
+.active.u {
 	background-image: url(../img/up.png);
 	background-position: center top;
 	background-repeat: no-repeat;
 }
 
-.r {
+.active.r {
 	background-image: url(../img/right.png);
 	background-position: right center;
 	background-repeat: no-repeat;
 }
 
-.d {
+.active.d {
 	background-image: url(../img/down.png);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
-.l {
+.active.l {
 	background-image: url(../img/left.png);
 	background-position: left center;
 	background-repeat: no-repeat;
 }
 
-.ur {
+.active.ur {
 	background-image: url(../img/up.png), url(../img/right.png);
 	background-position: center top, right center;
 	background-repeat: no-repeat;
 }
 
-.ud {
+.active.ud {
 	background-image: url(../img/up.png), url(../img/down.png);
 	background-position: center top, center bottom;
 	background-repeat: no-repeat;
 }
 
-.ul {
+.active.ul {
 	background-image: url(../img/up.png), url(../img/left.png);
 	background-position: center top, left center;
 	background-repeat: no-repeat;
 }
 
-.rd {
+.active.rd {
 	background-image: url(../img/right.png), url(../img/down.png);
 	background-position: right center, center bottom;
 	background-repeat: no-repeat;
 }
 
-.rl {
+.active.rl {
 	background-image: url(../img/right.png), url(../img/left.png);
 	background-position: right center, left center;
 	background-repeat: no-repeat;
 }
 
-.dl {
+.active.dl {
 	background-image: url(../img/down.png), url(../img/left.png);
 	background-position: center bottom, left center;
 	background-repeat: no-repeat;
 }
 
-.urd {
+.active.urd {
 	background-image: url(../img/up.png), url(../img/right.png), url(../img/down.png);
 	background-position: center top, right center, center bottom;
 	background-repeat: no-repeat;
 }
 
-.url {
+.active.url {
 	background-image: url(../img/up.png), url(../img/right.png), url(../img/left.png);
 	background-position: center top, right center, left center;
 	background-repeat: no-repeat;
 }
 
-.udl {
+.active.udl {
 	background-image: url(../img/up.png), url(../img/down.png), url(../img/left.png);
 	background-position: center top, center bottom, left center;
 	background-repeat: no-repeat;
 }
 
-.rdl {
+.active.rdl {
 	background-image: url(../img/right.png), url(../img/down.png), url(../img/left.png);
 	background-position: right center, center bottom, left center;
 	background-repeat: no-repeat;
 }
 
-.urdl {
+.active.urdl {
 	background-image: url(../img/up.png), url(../img/right.png), url(../img/down.png), url(../img/left.png);
 	background-position: center top, right center, center bottom, left center;
 	background-repeat: no-repeat;
