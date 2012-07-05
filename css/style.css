@@ -232,6 +232,7 @@ nav {
 		margin:2px 0 0 0;
 		padding:0;
 		text-align: center;
+		z-index: 101;
 	}
 	
 		nav ul li {
@@ -239,11 +240,14 @@ nav {
 			display: inline;
 			margin-right: 15px;
 			text-transform: lowercase;
+			z-index: 102;
 		}
 	
 #container { 
+	background-color: #FF6600; 
 	margin: 0 auto; 
 	visibility: hidden;
+	overflow: visible !important;
 }
 	#container h2 {
 		position: absolute;
@@ -330,6 +334,19 @@ nav {
 		left: 500px;
 	}
 
+.active {
+	opacity: 1;
+	filter: alpha(opacity=100); /*for Internet Explorer 6/7*/
+	filter: "alpha(opacity=100)"; /*for Internet Explorer 8*/
+	
+}
+
+.inactive {
+	opacity: 0.4;
+	filter: alpha(opacity=40); /*for Internet Explorer 6/7*/
+	filter: "alpha(opacity=40)"; /*for Internet Explorer 8*/
+}
+	
 .u {
 	background-image: url(../img/up.png);
 	background-position: center top;
@@ -419,6 +436,9 @@ nav {
 	background-position: center top, right center, center bottom, left center;
 	background-repeat: no-repeat;
 }
+
+
+
 
 
 /* ==|== media queries ======================================================
